@@ -1,12 +1,14 @@
-import { useState } from "react";
+import { useState } from 'react';
 import products from "./products.json"
 
 import "./styles/App.scss"
-import "./styles/header.scss"
+import "./styles/shoppingCart.scss" 
 import "./styles/games.scss"
+import "./styles/header.scss"
 
 import Header from "./components/Header.js";
 import Games from './components/Games.js';
+import ShoppingCart from './components/ShoppingCart';
 
 function App() {
 
@@ -32,9 +34,11 @@ function App() {
             setShowShoppingCart={setShowShoppingCart}
           ></Games>
         :
-         <div></div>
+          <ShoppingCart
+            shoppingCart={shoppingCart} 
+            setShoppingCart={setShoppingCart}
+          ></ShoppingCart>
         }
-        
       </div>
   );
 }
