@@ -1,0 +1,7 @@
+$color-text: #B4B4B4;
+
+@mixin borderAndColor(){
+    border: solid 2px #5D5D5D;
+    background-color: #191919;
+    color: $color-text;
+}

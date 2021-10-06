@@ -1,7 +1,9 @@
+@import "./variables";
+
 .header{
     width: 100vw; height: 70px;
     background-color: #101010;
-    color: #B4B4B4;
+    color: $color-text;
     font-size: 30px;
     font-weight: bold;
     line-height: 2.3;
