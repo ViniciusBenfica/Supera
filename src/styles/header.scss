@@ -1,0 +1,19 @@
+.header{
+    width: 100vw; height: 70px;
+    background-color: #101010;
+    color: #B4B4B4;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 2.3;
+
+    div{
+      float: right;
+      margin-right: 30px;
+    }
+
+    div:hover{
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+  
