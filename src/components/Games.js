@@ -7,7 +7,7 @@ export default function Games({product, setProduct, shoppingCart, setShoppingCar
   const [cloneNewProduct, setCloneNewProduct] = useState(product)
 
   useEffect(() => {
-    if(search == ""){
+    if(search === ""){
       setProduct(newProduct)
     }else{
       var arrayFilter = cloneNewProduct.filter(item => (item.name.toLowerCase().indexOf(search) > -1 || item.name.toUpperCase().indexOf(search) > -1))
@@ -19,7 +19,7 @@ export default function Games({product, setProduct, shoppingCart, setShoppingCar
   const order = (typeOrder) => {
       let newBuy = [...product]
       let filter = typeOrder.substring(4)
-      if(typeOrder.substring(3, 0) == "cre"){
+      if(typeOrder.substring(3, 0) === "cre"){
         newBuy.sort((a, b) => (a[filter] > b[filter] ? 1 : b[filter] > a[filter] ? -1 : 0));
       }else{
         newBuy.sort((a, b) => (a[filter] > b[filter] ? -1 : b[typeOrder] > a[filter] ? 1 : 0));
@@ -35,7 +35,7 @@ export default function Games({product, setProduct, shoppingCart, setShoppingCar
     return(
         <div>
           <div className="filter">
-              <input onChange={e => setSearch(e.target.value)}/>
+              <input placeholder="Pesquisar" onChange={e => setSearch(e.target.value)}/>
 
               <select onChange={(e) => order(e.target.value)} className="select">
                 <option>ORDERNAR POR</option>

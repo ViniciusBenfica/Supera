@@ -3,7 +3,6 @@ import { useEffect, useState } from "react"
 export default function ShoppingCart({shoppingCart, setShoppingCart}){
 
     const [freight, setFreight] = useState(0)
-    const [price, setPrice] = useState(0)
 
     useEffect(() => {
 
@@ -14,8 +13,6 @@ export default function ShoppingCart({shoppingCart, setShoppingCart}){
             totalFreight = totalFreight + item.price + 10
             totalPrice += item.price
         })
-
-        setPrice("R$" + totalPrice)
 
         if(totalPrice >= 250){
             setFreight("R$" + totalPrice)
